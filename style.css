@@ -1,22 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
 }
 
 header {
     background-color: #333;
     color: white;
     padding: 10px;
+    height: 4vh;
+    position: sticky;
+    top:0;
 }
-
 nav ul {
     list-style-type: none;
     padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content:flex-start;
+    flex-wrap:wrap
 }
 
 nav ul li a {
@@ -38,10 +42,54 @@ main {
     margin-top: 20px;
 }
 
-.menu-item {
+.menu-items {
     border: 1px solid #ccc;
     margin-bottom: 20px;
     padding: 20px;
+
+    
+}
+.menu-item{
+    display: grid;
+    grid-template-columns: 28vw auto auto;
+    /* justify-items: center; */
+    /* align-content: center; */
+    border:1px solid #ccc;
+    border-radius: 10px;
+    /* row-gap: 10px; */
+    margin-bottom: 10px;
+    align-items: center;
+
+}
+.item-img{
+    margin-right: 10px;   
+    /* border: black solid; */
+}
+.item-img img{
+    border-radius: 10px;
+}
+.item-name{
+    /* border:black solid; */
+    text-align:center;
+}
+.discription{
+    /* border:black solid; */
+    margin: 4px;
+    padding: 4px;
+    grid-column-start:1;
+    grid-column-end: 4;
+}
+.price{
+    /* border: 1px solid black; */
+    text-align: center;    
+    padding: 45px 0px;
+}
+.price button{
+    color: white;
+    background-color: rgb(77, 67, 215);
+    padding: 6px;
+    border: 2px solid rgba(0, 0, 0, 0.192);
+    border-radius: 15px;
 }
 
 .contact {
